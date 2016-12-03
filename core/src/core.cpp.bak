@@ -1,0 +1,202 @@
+#include <iostream>
+#include "ros/ros.h"
+#include "core/CoreMsg.h"
+#include "ros/topic.h"
+
+#define DELAY_MS    10
+
+using namespace std;
+
+enum state_t{
+    Standby = 0x0010,   // extra = 00 standby = 1 run = 0
+    Catch = 0x0001,     // extra = 00 standby = 0 run = 1
+    Move = 0x0101,      // extra = 01 standby = 0 run = 1
+    Return = 0x1001,    // extra = 10 standby = 0 run = 1
+    Search = 0x1101    // extra = 11 standby = 0 run = 1
+};
+
+
+class aCore {
+private:
+    // Input and output wire:
+    static bool in_enable_catch;
+    static bool in_enable_move;
+    static bool in_enable_return;
+    static bool in_enable_search;
+    static bool in_enable_standby;
+
+    // unsigned int buf_enable_standby;
+    // unsigned int buf_enable_move;
+    // unsigned int buf_enable_search;
+    // unsigned int buf_enable_catch;
+    // unsigned int buf_enable_return;
+    bool buf_enable_standby;
+    bool buf_enable_move;
+    bool buf_enable_search;
+    bool buf_enable_catch;
+    bool buf_enable_return;
+
+    // State bits:
+
+    static state_t state;
+    static state_t next_state;
+
+    // Ros node:
+    ros::Publisher statePub;
+    ros::Publisher enablePub;
+
+    core::CoreMsg createStateMsg() {
+        core::CoreMsg msg;
+        msg.Standby = (state == Standby);
+        msg.Move = (state == Move);
+        msg.Search = (state == Search);
+        msg.Catch = (state == Catch);
+        msg.Return = (state == Return);
+        return msg;
+    }
+
+    core::CoreMsg createEnableMsg() {
+        core::CoreMsg msg;
+        msg.Standby = in_enable_standby;
+        msg.Move = in_enable_move;
+        msg.Search = in_enable_search;
+        msg.Catch = in_enable_catch;
+        msg.Return = in_enable_return;
+        return msg;
+    }
+
+    void showState() {
+        if (state == Standby)
+            cout << "INFO: current state is: " << "Standby" << endl;
+        if (state == Move)
+            cout << "INFO: current state is: " << "Move" << endl;
+        if (state == Search)
+            cout << "INFO: current state is: " << "Search" << endl;
+        if (state == Catch)
+            cout << "INFO: current state is: " << "Catch" << endl;
+        if (state == Return)
+            cout << "INFO: current state is: " << "Return" << endl;
+    }
+
+public:
+
+    core::CoreMsg stateMsg;
+    core::CoreMsg enableMsg;
+
+    void mainLoop(ros::NodeHandle node) {
+        state = next_state;
+        // Update enable request
+        int ret = node.getParam("/core/enStandby", buf_enable_standby) &&
+                 node.getParam("/core/enMove", buf_enable_move) &&
+                 node.getParam("/core/enSearch", buf_enable_search) &&
+                 node.getParam("/core/enCatch", buf_enable_catch) &&
+                 node.getParam("/core/enReturn", buf_enable_return);
+        if (!ret) {
+            perror("ERR: fault to get arguments form rosparams server");
+        }
+        if ( 1 == (buf_enable_standby + buf_enable_move + buf_enable_search + buf_enable_catch + buf_enable_return) ) {
+            in_enable_standby = buf_enable_standby;
+            in_enable_move = buf_enable_move;
+            in_enable_search = buf_enable_search;
+            in_enable_catch = buf_enable_catch;
+            in_enable_return = buf_enable_return;
+        }
+        else {
+            perror("ERR: rosparams server of enable request have multiple state");
+        }
+
+        switch(state) {
+
+            case Standby:
+                if (in_enable_return) {
+                    next_state = Return;
+                    showState();
+                }
+                else if(in_enable_catch) {
+                    next_state = Catch;
+                    showState();
+                }
+                else if(in_enable_search) {
+                    next_state = Search;
+                    showState();
+                }
+                else if(in_enable_move) {
+                    next_state = Move;
+                    showState();
+                }
+                else {
+                    next_state = Standby;
+                }
+                break;
+            case Catch:
+                if (in_enable_return) {
+                    next_state = Return;
+                    showState();
+                }
+                else if (in_enable_search) {
+                    next_state = Search;
+                    showState();
+                }
+                else {
+                    next_state = Catch;
+                }
+                break;
+            case Move:
+                if (in_enable_search) {
+                    next_state = Search;
+                    showState();
+                }
+                else {
+                    next_state = Move;
+                }
+                break;
+            case Return:
+                if (in_enable_standby) {
+                    next_state = Standby;
+                    showState();
+                }
+                else {
+                    next_state = Return;
+                }
+                break;
+            case Search:
+                if (in_enable_catch) {
+                    next_state = Catch;
+                    showState();
+                }
+                else if(in_enable_move) {
+                    next_state = Move;
+                    showState();
+                }
+                else {
+                    next_state = Search;
+                }
+                break;
+        }
+        statePub.publish(createStateMsg());
+        enablePub.publish(createEnableMsg());
+        usleep(1000 * DELAY_MS);
+    }
+
+    void rosInit(ros::NodeHandle node) {
+        statePub = node.advertise<core::CoreMsg>("core/state", 10);
+        enablePub = node.advertise<core::CoreMsg>("core/enable", 10);
+    }
+
+
+};
+
+state_t aCore::state = Standby;
+state_t aCore::next_state = Standby;
+
+int main(int argc, char *argv[])
+{
+    ros::init(argc, argv, "core");
+    ros::NodeHandle node;
+
+    // aCore co;
+// 
+    // co.rosInit(node);
+    // co.mainLoop(node);
+    return 0;
+}

@@ -1,0 +1,147 @@
+<robot name="dobot">
+
+    <link name="dobot_base">
+        <visual>
+            <origin xyz="0 0 10" rpy="0 0 0" />
+            <geometry>
+                <box size="10 10 5" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 .7 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="1.57 0 0" />
+            <geometry>
+                <cylinder radius="0.01" length=".5" />
+            </geometry>
+            <contact_coefficients mu="0" kp="1000.0" kd="1.0"/>
+        </collision>
+    </link>
+
+    <link name="dobot_turntable">
+        <visual>
+            <origin xyz="0 0 10" rpy="0 0 0" />
+            <geometry>
+                <box size="10 10 5" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 .7 1" />
+            </material>
+        </visual>
+    </link>
+
+    <link name="dobot_arm_big" />
+        <visual>
+            <origin xyz="0 0 10" rpy="0 0 0" />
+            <geometry>
+                <box size="10 10 5" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 .7 1" />
+            </material>
+        </visual>
+    </link>
+    <link name="dobot_arm_small" />
+        <visual>
+            <origin xyz="0 0 10" rpy="0 0 0" />
+            <geometry>
+                <box size="10 10 5" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 .7 1" />
+            </material>
+        </visual>
+    </link>
+    <link name="dobot_clamp_base" />
+        <visual>
+            <origin xyz="0 3 0" rpy="0 0 0" />
+            <geometry>
+                <box size="3 3 3" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 .7 1" />
+            </material>
+        </visual>
+    </link>
+    <link name="dobot_clip_left" />
+        <visual>
+            <origin xyz="2 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="2 2 2" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="dobot_clip_right" />
+        <visual>
+            <origin xyz="2 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="2 2 2" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="dobot_camera">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="3 1 0.5" />
+            </geometry>
+            <material name="white">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="dobot_joint0" type="fixed">
+        <parent link="axis" />
+        <child link="dobot_base" />
+    </joint>
+
+    <joint name="dobot_joint1" type="continuous">
+        <parent link="dobot_base" />
+        <child link="dobot_turntable" />
+        <origin xyz="0 0 2" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="dobot_joint2" type="continuous">
+        <parent link="dobot_turntable" />
+        <child link="dobot_arm_big" />
+        <origin xyz="0 0 4" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="dobot_joint3" type="continuous">
+        <parent link="dobot_arm_big" />
+        <child link="dobot_arm_small" />
+        <origin xyz="0 0 5" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="dobot_joint4" type="continuous">
+        <parent link="dobot_arm_small" />
+        <child link="dobot_clamp_base" />
+        <origin xyz="0 0 -5" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="dobot_clamp_pump1" type="fixed">
+        <parent link="dobot_clamp_base" />
+        <child link="dobot_clip_left" />
+        <origin xyz="0 0 -3" rpy="0 0 0" />
+    </joint>
+
+    <joint name="dobot_clamp_pump2" type="fixed">
+        <parent link="dobot_clamp_base" />
+        <child link="dobot_clip_right" />
+        <origin xyz="0 0 -3" rpy="0 0 0" />
+    </joint>
+
+    <joint name="dobot_bonding" type="fixed">
+        <parent link="dobot_arm_small" />
+        <child link="dobot_camera" />
+        <origin xyz="5 0 0" rpy="0 0 0" />
+    </joint>
+
+</robot>
+

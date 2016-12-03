@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+
+<robot name="dobot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <property name="dobot_base_x" value="0.15" />
+    <property name="dobot_base_y" value="0.15" />
+    <property name="dobot_base_z" value="0.3" />
+
+    <macro name="dobot" params="parent name color *origin">
+        <joint name="${parent}_${name}_joint" type="fixed">
+            <xacro:insert_block name="origin" />
+            <parent link="${parent}_link" />
+            <child link="${name}_link" />
+        </joint>
+        <link name="${name}_link">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <box size="${dobot_base_x} ${dobot_base_y} ${dobot_base_z}" />
+                </geometry>
+                <material name="${color}" />
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <box size="${dobot_base_x} ${dobot_base_y} ${dobot_base_z}" />
+                </geometry>
+            </collision>
+        </link>
+    </macro>
+
+    <!--
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="1 1 0.5" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 .7 1" />
+            </material>
+        </visual>
+    </link>
+
+    <link name="dobot_hand">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size=".5 .5 .5" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 0.7 1" />
+            </material>
+        </visual>
+    </link>
+
+    <link name="dobot_clamp_base">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size=".2 .2 .2" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 .7 1" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="dobot_joint" type="floating">
+        <origin xyz="2 2 2" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="dobot_hand"/>
+
+        <calibration rising="0.0"/>
+        <dynamics damping="0.0" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+        <safety_controller k_velocity="10" k_position="15" soft_lower_limit="-2.0" soft_upper_limit="0.5" />
+    </joint>
+
+    <joint name="dobot_joint1" type="continuous">
+        <parent link="dobot_hand" />
+        <child link="dobot_clamp_base" />
+        <origin xyz="0 0 1" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+    </joint>
+    -->
+
+
+</robot>
+

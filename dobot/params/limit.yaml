@@ -1,0 +1,15 @@
+# range limited of arm move
+# (X Y Z R) is the base Cartesian coordinate
+# (Radius, Theta Z R) is the base 2-D Polar coordinate
+limitMinX:  200
+limitMaxX:  300
+limitMinY:  -114
+limitMaxY:  114
+limitMinZ:  -35
+limitMaxZ:  65
+limitMinR:  -135
+limitMaxR:  135
+limitMaxRadius: 300
+limitMinRadius: 200
+limitMaxTheta: 100
+limitMinTheta: -110

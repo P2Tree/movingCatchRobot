@@ -1,0 +1,348 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CTRLQ	dobotDriver.hpp	9;"	d
+CTRLR	dobotDriver.hpp	7;"	d
+CTRLW	dobotDriver.hpp	8;"	d
+CmdGetCurrentPoseRet_t	dobotDriver.hpp	/^}CmdGetCurrentPoseRet_t;$/;"	t	typeref:struct:__anon6
+CmdGetCurrentPose_t	dobotDriver.hpp	/^}CmdGetCurrentPose_t;$/;"	t	typeref:struct:__anon5
+CmdPointSetRet_t	dobotDriver.hpp	/^}CmdPointSetRet_t;$/;"	t	typeref:struct:__anon4
+CmdPointSet_t	dobotDriver.hpp	/^}CmdPointSet_t;$/;"	t	typeref:struct:__anon3
+CmdSetHomeRet_t	dobotDriver.hpp	/^}CmdSetHomeRet_t;$/;"	t	typeref:struct:__anon8
+CmdSetHome_t	dobotDriver.hpp	/^}CmdSetHome_t;$/;"	t	typeref:struct:__anon7
+DEBUG	dobotDriver.cpp	34;"	d	file:
+DOBOT_DRIVER_H_	dobotDriver.hpp	2;"	d
+DobotDriver	dobotDriver.cpp	/^DobotDriver::DobotDriver() : uartPort("\/dev\/dobot"), uartBaud(115200){$/;"	f	class:DobotDriver	signature:()
+DobotDriver	dobotDriver.cpp	/^DobotDriver::DobotDriver(ros::NodeHandle node) : uartPort("\/dev\/dobot"), uartBaud(115200){$/;"	f	class:DobotDriver	signature:(ros::NodeHandle node)
+DobotDriver	dobotDriver.hpp	/^    DobotDriver();$/;"	p	class:DobotDriver	access:public	signature:()
+DobotDriver	dobotDriver.hpp	/^    DobotDriver(ros::NodeHandle);$/;"	p	class:DobotDriver	access:public	signature:(ros::NodeHandle)
+DobotDriver	dobotDriver.hpp	/^class DobotDriver {$/;"	c
+DobotDriver::DobotDriver	dobotDriver.cpp	/^DobotDriver::DobotDriver() : uartPort("\/dev\/dobot"), uartBaud(115200){$/;"	f	class:DobotDriver	signature:()
+DobotDriver::DobotDriver	dobotDriver.cpp	/^DobotDriver::DobotDriver(ros::NodeHandle node) : uartPort("\/dev\/dobot"), uartBaud(115200){$/;"	f	class:DobotDriver	signature:(ros::NodeHandle node)
+DobotDriver::DobotDriver	dobotDriver.hpp	/^    DobotDriver();$/;"	p	class:DobotDriver	access:public	signature:()
+DobotDriver::DobotDriver	dobotDriver.hpp	/^    DobotDriver(ros::NodeHandle);$/;"	p	class:DobotDriver	access:public	signature:(ros::NodeHandle)
+DobotDriver::MaxR	dobotDriver.cpp	/^float DobotDriver::MaxR = 135;$/;"	m	class:DobotDriver	file:
+DobotDriver::MaxR	dobotDriver.hpp	/^    static float MaxR;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MaxRadius	dobotDriver.cpp	/^float DobotDriver::MaxRadius = 300;$/;"	m	class:DobotDriver	file:
+DobotDriver::MaxRadius	dobotDriver.hpp	/^    static float MaxRadius;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MaxTheta	dobotDriver.cpp	/^float DobotDriver::MaxTheta = 120;$/;"	m	class:DobotDriver	file:
+DobotDriver::MaxTheta	dobotDriver.hpp	/^    static float MaxTheta;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MaxX	dobotDriver.cpp	/^float DobotDriver::MaxX = 300;$/;"	m	class:DobotDriver	file:
+DobotDriver::MaxX	dobotDriver.hpp	/^    static float MaxX;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MaxY	dobotDriver.cpp	/^float DobotDriver::MaxY = 114;$/;"	m	class:DobotDriver	file:
+DobotDriver::MaxY	dobotDriver.hpp	/^    static float MaxY;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MaxZ	dobotDriver.cpp	/^float DobotDriver::MaxZ = 65;$/;"	m	class:DobotDriver	file:
+DobotDriver::MaxZ	dobotDriver.hpp	/^    static float MaxZ;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MinR	dobotDriver.cpp	/^float DobotDriver::MinR = -135;$/;"	m	class:DobotDriver	file:
+DobotDriver::MinR	dobotDriver.hpp	/^    static float MinR;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MinRadius	dobotDriver.cpp	/^float DobotDriver::MinRadius = 200;$/;"	m	class:DobotDriver	file:
+DobotDriver::MinRadius	dobotDriver.hpp	/^    static float MinRadius;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MinTheta	dobotDriver.cpp	/^float DobotDriver::MinTheta = -120;$/;"	m	class:DobotDriver	file:
+DobotDriver::MinTheta	dobotDriver.hpp	/^    static float MinTheta;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MinX	dobotDriver.cpp	/^float DobotDriver::MinX = 200;$/;"	m	class:DobotDriver	file:
+DobotDriver::MinX	dobotDriver.hpp	/^    static float MinX;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MinY	dobotDriver.cpp	/^float DobotDriver::MinY = -114;$/;"	m	class:DobotDriver	file:
+DobotDriver::MinY	dobotDriver.hpp	/^    static float MinY;$/;"	m	class:DobotDriver	access:private
+DobotDriver::MinZ	dobotDriver.cpp	/^float DobotDriver::MinZ = -35;$/;"	m	class:DobotDriver	file:
+DobotDriver::MinZ	dobotDriver.hpp	/^    static float MinZ;$/;"	m	class:DobotDriver	access:private
+DobotDriver::checkChecksum	dobotDriver.cpp	/^int DobotDriver::checkChecksum( unsigned char *data, unsigned int datalen) {$/;"	f	class:DobotDriver	signature:( unsigned char *data, unsigned int datalen)
+DobotDriver::checkChecksum	dobotDriver.hpp	/^    int checkChecksum(unsigned char *data, unsigned int datalen);$/;"	p	class:DobotDriver	access:private	signature:(unsigned char *data, unsigned int datalen)
+DobotDriver::createGetCurrentPoseCmd	dobotDriver.cpp	/^CmdGetCurrentPose_t DobotDriver::createGetCurrentPoseCmd() {$/;"	f	class:DobotDriver	signature:()
+DobotDriver::createGetCurrentPoseCmd	dobotDriver.hpp	/^    CmdGetCurrentPose_t createGetCurrentPoseCmd();$/;"	p	class:DobotDriver	access:private	signature:()
+DobotDriver::createPointsetCmd	dobotDriver.cpp	/^CmdPointSet_t DobotDriver::createPointsetCmd(Pose_t pose) {$/;"	f	class:DobotDriver	signature:(Pose_t pose)
+DobotDriver::createPointsetCmd	dobotDriver.hpp	/^    CmdPointSet_t createPointsetCmd(Pose_t pose);$/;"	p	class:DobotDriver	access:private	signature:(Pose_t pose)
+DobotDriver::createSetHomeCmd	dobotDriver.cpp	/^CmdSetHome_t DobotDriver::createSetHomeCmd() {$/;"	f	class:DobotDriver	signature:()
+DobotDriver::createSetHomeCmd	dobotDriver.hpp	/^    CmdSetHome_t createSetHomeCmd();$/;"	p	class:DobotDriver	access:private	signature:()
+DobotDriver::currentPose	dobotDriver.hpp	/^    Pose_t currentPose;$/;"	m	class:DobotDriver	access:private
+DobotDriver::currentPosePub	dobotDriver.hpp	/^    ros::Publisher currentPosePub;$/;"	m	class:DobotDriver	access:private
+DobotDriver::getCurrentPose	dobotDriver.cpp	/^int DobotDriver::getCurrentPose(FullPose_t &retPose) {$/;"	f	class:DobotDriver	signature:(FullPose_t &retPose)
+DobotDriver::getCurrentPose	dobotDriver.hpp	/^    int getCurrentPose(FullPose_t &pose);$/;"	p	class:DobotDriver	access:private	signature:(FullPose_t &pose)
+DobotDriver::openPort	dobotDriver.cpp	/^void DobotDriver::openPort() {$/;"	f	class:DobotDriver	signature:()
+DobotDriver::openPort	dobotDriver.hpp	/^    void openPort();$/;"	p	class:DobotDriver	access:private	signature:()
+DobotDriver::printGetCurrentPoseCmd	dobotDriver.cpp	/^void DobotDriver::printGetCurrentPoseCmd(CmdGetCurrentPose_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdGetCurrentPose_t cmd)
+DobotDriver::printGetCurrentPoseCmd	dobotDriver.hpp	/^    void printGetCurrentPoseCmd(CmdGetCurrentPose_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdGetCurrentPose_t cmd)
+DobotDriver::printGetCurrentPoseRetCmd	dobotDriver.cpp	/^void DobotDriver::printGetCurrentPoseRetCmd(CmdGetCurrentPoseRet_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdGetCurrentPoseRet_t cmd)
+DobotDriver::printGetCurrentPoseRetCmd	dobotDriver.hpp	/^    void printGetCurrentPoseRetCmd(CmdGetCurrentPoseRet_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdGetCurrentPoseRet_t cmd)
+DobotDriver::printPointsetCmd	dobotDriver.cpp	/^void DobotDriver::printPointsetCmd(CmdPointSet_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdPointSet_t cmd)
+DobotDriver::printPointsetCmd	dobotDriver.hpp	/^    void printPointsetCmd(CmdPointSet_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdPointSet_t cmd)
+DobotDriver::printPointsetRetCmd	dobotDriver.cpp	/^void DobotDriver::printPointsetRetCmd(CmdPointSetRet_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdPointSetRet_t cmd)
+DobotDriver::printPointsetRetCmd	dobotDriver.hpp	/^    void printPointsetRetCmd(CmdPointSetRet_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdPointSetRet_t cmd)
+DobotDriver::printSetHomeCmd	dobotDriver.cpp	/^void DobotDriver::printSetHomeCmd(CmdSetHome_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdSetHome_t cmd)
+DobotDriver::printSetHomeCmd	dobotDriver.hpp	/^    void printSetHomeCmd(CmdSetHome_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdSetHome_t cmd)
+DobotDriver::rosGoBootHome	dobotDriver.cpp	/^void DobotDriver::rosGoBootHome() {$/;"	f	class:DobotDriver	signature:()
+DobotDriver::rosGoBootHome	dobotDriver.hpp	/^    void rosGoBootHome();$/;"	p	class:DobotDriver	access:public	signature:()
+DobotDriver::rosPublishPose	dobotDriver.cpp	/^void DobotDriver::rosPublishPose() {$/;"	f	class:DobotDriver	signature:()
+DobotDriver::rosPublishPose	dobotDriver.hpp	/^    void rosPublishPose();$/;"	p	class:DobotDriver	access:public	signature:()
+DobotDriver::rosSet2Zero	dobotDriver.cpp	/^int DobotDriver::rosSet2Zero() {$/;"	f	class:DobotDriver	signature:()
+DobotDriver::rosSet2Zero	dobotDriver.hpp	/^    int rosSet2Zero();$/;"	p	class:DobotDriver	access:public	signature:()
+DobotDriver::rosSetPoseCB	dobotDriver.cpp	/^void DobotDriver::rosSetPoseCB(const dobot::DobotPoseMsg receivePose) {$/;"	f	class:DobotDriver	signature:(const dobot::DobotPoseMsg receivePose)
+DobotDriver::rosSetPoseCB	dobotDriver.hpp	/^    void rosSetPoseCB(const dobot::DobotPoseMsg receivePose);$/;"	p	class:DobotDriver	access:public	signature:(const dobot::DobotPoseMsg receivePose)
+DobotDriver::runPointset	dobotDriver.cpp	/^int DobotDriver::runPointset(Pose_t pose) {$/;"	f	class:DobotDriver	signature:(Pose_t pose)
+DobotDriver::runPointset	dobotDriver.hpp	/^    int runPointset(Pose_t pose);$/;"	p	class:DobotDriver	access:private	signature:(Pose_t pose)
+DobotDriver::sendGetCurrentPoseCmd	dobotDriver.cpp	/^void DobotDriver::sendGetCurrentPoseCmd(CmdGetCurrentPose_t cmd, FullPose_t &retPose) {$/;"	f	class:DobotDriver	signature:(CmdGetCurrentPose_t cmd, FullPose_t &retPose)
+DobotDriver::sendGetCurrentPoseCmd	dobotDriver.hpp	/^    void sendGetCurrentPoseCmd(CmdGetCurrentPose_t cmd, FullPose_t &retPose);$/;"	p	class:DobotDriver	access:private	signature:(CmdGetCurrentPose_t cmd, FullPose_t &retPose)
+DobotDriver::sendPointsetCmd	dobotDriver.cpp	/^void DobotDriver::sendPointsetCmd(CmdPointSet_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdPointSet_t cmd)
+DobotDriver::sendPointsetCmd	dobotDriver.hpp	/^    void sendPointsetCmd(CmdPointSet_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdPointSet_t cmd)
+DobotDriver::sendSetHomeCmd	dobotDriver.cpp	/^void DobotDriver::sendSetHomeCmd(CmdSetHome_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdSetHome_t cmd)
+DobotDriver::sendSetHomeCmd	dobotDriver.hpp	/^    void sendSetHomeCmd(CmdSetHome_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdSetHome_t cmd)
+DobotDriver::setInit	dobotDriver.cpp	/^int DobotDriver::setInit(ros::NodeHandle node) {$/;"	f	class:DobotDriver	signature:(ros::NodeHandle node)
+DobotDriver::setInit	dobotDriver.hpp	/^    int setInit(ros::NodeHandle node);$/;"	p	class:DobotDriver	access:private	signature:(ros::NodeHandle node)
+DobotDriver::setPoseSub	dobotDriver.hpp	/^    ros::Subscriber setPoseSub;$/;"	m	class:DobotDriver	access:private
+DobotDriver::setUartOpt	dobotDriver.cpp	/^void DobotDriver::setUartOpt(const int nSpeed, const int nBits, const char nEvent, const int nStop) {$/;"	f	class:DobotDriver	signature:(const int nSpeed, const int nBits, const char nEvent, const int nStop)
+DobotDriver::setUartOpt	dobotDriver.hpp	/^    void setUartOpt(const int nSpeed, const int nBits, const char nEvent, const int nStop);$/;"	p	class:DobotDriver	access:private	signature:(const int nSpeed, const int nBits, const char nEvent, const int nStop)
+DobotDriver::uartBaud	dobotDriver.hpp	/^    const unsigned int uartBaud;$/;"	m	class:DobotDriver	access:private
+DobotDriver::uartFd	dobotDriver.hpp	/^    int uartFd;$/;"	m	class:DobotDriver	access:private
+DobotDriver::uartInit	dobotDriver.cpp	/^int DobotDriver::uartInit() {$/;"	f	class:DobotDriver	signature:()
+DobotDriver::uartInit	dobotDriver.hpp	/^    int uartInit();$/;"	p	class:DobotDriver	access:private	signature:()
+DobotDriver::uartPort	dobotDriver.hpp	/^    const char *uartPort;$/;"	m	class:DobotDriver	access:private
+DobotDriver::updateCurrentPose	dobotDriver.cpp	/^void DobotDriver::updateCurrentPose(Pose_t pose) {$/;"	f	class:DobotDriver	signature:(Pose_t pose)
+DobotDriver::updateCurrentPose	dobotDriver.hpp	/^    void updateCurrentPose(Pose_t pose);$/;"	p	class:DobotDriver	access:private	signature:(Pose_t pose)
+DobotDriver::updateZero	dobotDriver.cpp	/^int DobotDriver::updateZero() {$/;"	f	class:DobotDriver	signature:()
+DobotDriver::updateZero	dobotDriver.hpp	/^    int updateZero();$/;"	p	class:DobotDriver	access:private	signature:()
+DobotDriver::zeroR	dobotDriver.cpp	/^float DobotDriver::zeroR = 0;$/;"	m	class:DobotDriver	file:
+DobotDriver::zeroR	dobotDriver.hpp	/^    static float zeroR;$/;"	m	class:DobotDriver	access:private
+DobotDriver::zeroX	dobotDriver.cpp	/^float DobotDriver::zeroX = 200.0;$/;"	m	class:DobotDriver	file:
+DobotDriver::zeroX	dobotDriver.hpp	/^    static float zeroX;$/;"	m	class:DobotDriver	access:private
+DobotDriver::zeroY	dobotDriver.cpp	/^float DobotDriver::zeroY = 0.0;$/;"	m	class:DobotDriver	file:
+DobotDriver::zeroY	dobotDriver.hpp	/^    static float zeroY;$/;"	m	class:DobotDriver	access:private
+DobotDriver::zeroZ	dobotDriver.cpp	/^float DobotDriver::zeroZ = -35;$/;"	m	class:DobotDriver	file:
+DobotDriver::zeroZ	dobotDriver.hpp	/^    static float zeroZ;$/;"	m	class:DobotDriver	access:private
+FullPose_t	dobotDriver.hpp	/^}FullPose_t;$/;"	t	typeref:struct:__anon2
+HD	dobotDriver.hpp	6;"	d
+ID_GETCURRENTPOSE	dobotDriver.hpp	16;"	d
+ID_POINTSET	dobotDriver.hpp	15;"	d
+ID_SETHOME	dobotDriver.hpp	17;"	d
+LEN_GETCURRENTPOSE	dobotDriver.hpp	12;"	d
+LEN_POINTSET	dobotDriver.hpp	10;"	d
+LEN_POINTSETRET	dobotDriver.hpp	11;"	d
+LEN_SETHOME	dobotDriver.hpp	13;"	d
+LEN_SETHOMERET	dobotDriver.hpp	14;"	d
+MaxR	dobotDriver.cpp	/^float DobotDriver::MaxR = 135;$/;"	m	class:DobotDriver	file:
+MaxR	dobotDriver.hpp	/^    static float MaxR;$/;"	m	class:DobotDriver	access:private
+MaxRadius	dobotDriver.cpp	/^float DobotDriver::MaxRadius = 300;$/;"	m	class:DobotDriver	file:
+MaxRadius	dobotDriver.hpp	/^    static float MaxRadius;$/;"	m	class:DobotDriver	access:private
+MaxTheta	dobotDriver.cpp	/^float DobotDriver::MaxTheta = 120;$/;"	m	class:DobotDriver	file:
+MaxTheta	dobotDriver.hpp	/^    static float MaxTheta;$/;"	m	class:DobotDriver	access:private
+MaxX	dobotDriver.cpp	/^float DobotDriver::MaxX = 300;$/;"	m	class:DobotDriver	file:
+MaxX	dobotDriver.hpp	/^    static float MaxX;$/;"	m	class:DobotDriver	access:private
+MaxY	dobotDriver.cpp	/^float DobotDriver::MaxY = 114;$/;"	m	class:DobotDriver	file:
+MaxY	dobotDriver.hpp	/^    static float MaxY;$/;"	m	class:DobotDriver	access:private
+MaxZ	dobotDriver.cpp	/^float DobotDriver::MaxZ = 65;$/;"	m	class:DobotDriver	file:
+MaxZ	dobotDriver.hpp	/^    static float MaxZ;$/;"	m	class:DobotDriver	access:private
+MinR	dobotDriver.cpp	/^float DobotDriver::MinR = -135;$/;"	m	class:DobotDriver	file:
+MinR	dobotDriver.hpp	/^    static float MinR;$/;"	m	class:DobotDriver	access:private
+MinRadius	dobotDriver.cpp	/^float DobotDriver::MinRadius = 200;$/;"	m	class:DobotDriver	file:
+MinRadius	dobotDriver.hpp	/^    static float MinRadius;$/;"	m	class:DobotDriver	access:private
+MinTheta	dobotDriver.cpp	/^float DobotDriver::MinTheta = -120;$/;"	m	class:DobotDriver	file:
+MinTheta	dobotDriver.hpp	/^    static float MinTheta;$/;"	m	class:DobotDriver	access:private
+MinX	dobotDriver.cpp	/^float DobotDriver::MinX = 200;$/;"	m	class:DobotDriver	file:
+MinX	dobotDriver.hpp	/^    static float MinX;$/;"	m	class:DobotDriver	access:private
+MinY	dobotDriver.cpp	/^float DobotDriver::MinY = -114;$/;"	m	class:DobotDriver	file:
+MinY	dobotDriver.hpp	/^    static float MinY;$/;"	m	class:DobotDriver	access:private
+MinZ	dobotDriver.cpp	/^float DobotDriver::MinZ = -35;$/;"	m	class:DobotDriver	file:
+MinZ	dobotDriver.hpp	/^    static float MinZ;$/;"	m	class:DobotDriver	access:private
+PI	dobotDriver.cpp	33;"	d	file:
+Pose_t	dobotDriver.hpp	/^}Pose_t;$/;"	t	typeref:struct:__anon1
+__anon1::mode	dobotDriver.hpp	/^    unsigned int mode;$/;"	m	struct:__anon1	access:public
+__anon1::r	dobotDriver.hpp	/^    float r;$/;"	m	struct:__anon1	access:public
+__anon1::x	dobotDriver.hpp	/^    float x;$/;"	m	struct:__anon1	access:public
+__anon1::y	dobotDriver.hpp	/^    float y;$/;"	m	struct:__anon1	access:public
+__anon1::z	dobotDriver.hpp	/^    float z;$/;"	m	struct:__anon1	access:public
+__anon2::j1	dobotDriver.hpp	/^    float j1;$/;"	m	struct:__anon2	access:public
+__anon2::j2	dobotDriver.hpp	/^    float j2;$/;"	m	struct:__anon2	access:public
+__anon2::j3	dobotDriver.hpp	/^    float j3;$/;"	m	struct:__anon2	access:public
+__anon2::j4	dobotDriver.hpp	/^    float j4;$/;"	m	struct:__anon2	access:public
+__anon2::j5	dobotDriver.hpp	/^    float j5;$/;"	m	struct:__anon2	access:public
+__anon2::r	dobotDriver.hpp	/^    float r;$/;"	m	struct:__anon2	access:public
+__anon2::x	dobotDriver.hpp	/^    float x;$/;"	m	struct:__anon2	access:public
+__anon2::y	dobotDriver.hpp	/^    float y;$/;"	m	struct:__anon2	access:public
+__anon2::z	dobotDriver.hpp	/^    float z;$/;"	m	struct:__anon2	access:public
+__anon3::checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon3	access:public
+__anon3::ctrl	dobotDriver.hpp	/^    unsigned char ctrl;       \/\/ This command is always be write to dobot and isQueued$/;"	m	struct:__anon3	access:public
+__anon3::header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon3	access:public
+__anon3::header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon3	access:public
+__anon3::id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon3	access:public
+__anon3::len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon3	access:public
+__anon3::mode	dobotDriver.hpp	/^    unsigned char mode;$/;"	m	struct:__anon3	access:public
+__anon3::r	dobotDriver.hpp	/^    unsigned char r[4];$/;"	m	struct:__anon3	access:public
+__anon3::x	dobotDriver.hpp	/^    unsigned char x[4];$/;"	m	struct:__anon3	access:public
+__anon3::y	dobotDriver.hpp	/^    unsigned char y[4];$/;"	m	struct:__anon3	access:public
+__anon3::z	dobotDriver.hpp	/^    unsigned char z[4];$/;"	m	struct:__anon3	access:public
+__anon4::checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon4	access:public
+__anon4::ctrl	dobotDriver.hpp	/^    unsigned char ctrl;$/;"	m	struct:__anon4	access:public
+__anon4::header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon4	access:public
+__anon4::header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon4	access:public
+__anon4::id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon4	access:public
+__anon4::len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon4	access:public
+__anon4::queuedCmdIndex	dobotDriver.hpp	/^    unsigned char queuedCmdIndex[8];$/;"	m	struct:__anon4	access:public
+__anon5::checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon5	access:public
+__anon5::ctrl	dobotDriver.hpp	/^    unsigned char ctrl;$/;"	m	struct:__anon5	access:public
+__anon5::header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon5	access:public
+__anon5::header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon5	access:public
+__anon5::id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon5	access:public
+__anon5::len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon5	access:public
+__anon6::checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon6	access:public
+__anon6::ctrl	dobotDriver.hpp	/^    unsigned char ctrl;$/;"	m	struct:__anon6	access:public
+__anon6::header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon6	access:public
+__anon6::header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon6	access:public
+__anon6::id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon6	access:public
+__anon6::j1	dobotDriver.hpp	/^    unsigned char j1[4];$/;"	m	struct:__anon6	access:public
+__anon6::j2	dobotDriver.hpp	/^    unsigned char j2[4];$/;"	m	struct:__anon6	access:public
+__anon6::j3	dobotDriver.hpp	/^    unsigned char j3[4];$/;"	m	struct:__anon6	access:public
+__anon6::j4	dobotDriver.hpp	/^    unsigned char j4[4];$/;"	m	struct:__anon6	access:public
+__anon6::j5	dobotDriver.hpp	/^    unsigned char j5[4];$/;"	m	struct:__anon6	access:public
+__anon6::len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon6	access:public
+__anon6::r	dobotDriver.hpp	/^    unsigned char r[4];$/;"	m	struct:__anon6	access:public
+__anon6::x	dobotDriver.hpp	/^    unsigned char x[4];$/;"	m	struct:__anon6	access:public
+__anon6::y	dobotDriver.hpp	/^    unsigned char y[4];$/;"	m	struct:__anon6	access:public
+__anon6::z	dobotDriver.hpp	/^    unsigned char z[4];$/;"	m	struct:__anon6	access:public
+__anon7::checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon7	access:public
+__anon7::ctrl	dobotDriver.hpp	/^    unsigned char ctrl;$/;"	m	struct:__anon7	access:public
+__anon7::header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon7	access:public
+__anon7::header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon7	access:public
+__anon7::id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon7	access:public
+__anon7::len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon7	access:public
+__anon7::reserved	dobotDriver.hpp	/^    unsigned char reserved;$/;"	m	struct:__anon7	access:public
+__anon8::checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon8	access:public
+__anon8::ctrl	dobotDriver.hpp	/^    unsigned char ctrl;$/;"	m	struct:__anon8	access:public
+__anon8::header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon8	access:public
+__anon8::header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon8	access:public
+__anon8::id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon8	access:public
+__anon8::len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon8	access:public
+__anon8::queuedCmdIndex	dobotDriver.hpp	/^    unsigned char queuedCmdIndex[8];$/;"	m	struct:__anon8	access:public
+checkChecksum	dobotDriver.cpp	/^int DobotDriver::checkChecksum( unsigned char *data, unsigned int datalen) {$/;"	f	class:DobotDriver	signature:( unsigned char *data, unsigned int datalen)
+checkChecksum	dobotDriver.hpp	/^    int checkChecksum(unsigned char *data, unsigned int datalen);$/;"	p	class:DobotDriver	access:private	signature:(unsigned char *data, unsigned int datalen)
+checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon3	access:public
+checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon4	access:public
+checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon5	access:public
+checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon6	access:public
+checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon7	access:public
+checkSum	dobotDriver.hpp	/^    unsigned char checkSum;$/;"	m	struct:__anon8	access:public
+createGetCurrentPoseCmd	dobotDriver.cpp	/^CmdGetCurrentPose_t DobotDriver::createGetCurrentPoseCmd() {$/;"	f	class:DobotDriver	signature:()
+createGetCurrentPoseCmd	dobotDriver.hpp	/^    CmdGetCurrentPose_t createGetCurrentPoseCmd();$/;"	p	class:DobotDriver	access:private	signature:()
+createPointsetCmd	dobotDriver.cpp	/^CmdPointSet_t DobotDriver::createPointsetCmd(Pose_t pose) {$/;"	f	class:DobotDriver	signature:(Pose_t pose)
+createPointsetCmd	dobotDriver.hpp	/^    CmdPointSet_t createPointsetCmd(Pose_t pose);$/;"	p	class:DobotDriver	access:private	signature:(Pose_t pose)
+createSetHomeCmd	dobotDriver.cpp	/^CmdSetHome_t DobotDriver::createSetHomeCmd() {$/;"	f	class:DobotDriver	signature:()
+createSetHomeCmd	dobotDriver.hpp	/^    CmdSetHome_t createSetHomeCmd();$/;"	p	class:DobotDriver	access:private	signature:()
+ctrl	dobotDriver.hpp	/^    unsigned char ctrl;       \/\/ This command is always be write to dobot and isQueued$/;"	m	struct:__anon3	access:public
+ctrl	dobotDriver.hpp	/^    unsigned char ctrl;$/;"	m	struct:__anon4	access:public
+ctrl	dobotDriver.hpp	/^    unsigned char ctrl;$/;"	m	struct:__anon5	access:public
+ctrl	dobotDriver.hpp	/^    unsigned char ctrl;$/;"	m	struct:__anon6	access:public
+ctrl	dobotDriver.hpp	/^    unsigned char ctrl;$/;"	m	struct:__anon7	access:public
+ctrl	dobotDriver.hpp	/^    unsigned char ctrl;$/;"	m	struct:__anon8	access:public
+currentPose	dobotDriver.hpp	/^    Pose_t currentPose;$/;"	m	class:DobotDriver	access:private
+currentPosePub	dobotDriver.hpp	/^    ros::Publisher currentPosePub;$/;"	m	class:DobotDriver	access:private
+getCurrentPose	dobotDriver.cpp	/^int DobotDriver::getCurrentPose(FullPose_t &retPose) {$/;"	f	class:DobotDriver	signature:(FullPose_t &retPose)
+getCurrentPose	dobotDriver.hpp	/^    int getCurrentPose(FullPose_t &pose);$/;"	p	class:DobotDriver	access:private	signature:(FullPose_t &pose)
+header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon3	access:public
+header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon4	access:public
+header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon5	access:public
+header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon6	access:public
+header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon7	access:public
+header1	dobotDriver.hpp	/^    unsigned char header1;$/;"	m	struct:__anon8	access:public
+header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon3	access:public
+header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon4	access:public
+header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon5	access:public
+header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon6	access:public
+header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon7	access:public
+header2	dobotDriver.hpp	/^    unsigned char header2;$/;"	m	struct:__anon8	access:public
+id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon3	access:public
+id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon4	access:public
+id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon5	access:public
+id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon6	access:public
+id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon7	access:public
+id	dobotDriver.hpp	/^    unsigned char id;$/;"	m	struct:__anon8	access:public
+j1	dobotDriver.hpp	/^    float j1;$/;"	m	struct:__anon2	access:public
+j1	dobotDriver.hpp	/^    unsigned char j1[4];$/;"	m	struct:__anon6	access:public
+j2	dobotDriver.hpp	/^    float j2;$/;"	m	struct:__anon2	access:public
+j2	dobotDriver.hpp	/^    unsigned char j2[4];$/;"	m	struct:__anon6	access:public
+j3	dobotDriver.hpp	/^    float j3;$/;"	m	struct:__anon2	access:public
+j3	dobotDriver.hpp	/^    unsigned char j3[4];$/;"	m	struct:__anon6	access:public
+j4	dobotDriver.hpp	/^    float j4;$/;"	m	struct:__anon2	access:public
+j4	dobotDriver.hpp	/^    unsigned char j4[4];$/;"	m	struct:__anon6	access:public
+j5	dobotDriver.hpp	/^    float j5;$/;"	m	struct:__anon2	access:public
+j5	dobotDriver.hpp	/^    unsigned char j5[4];$/;"	m	struct:__anon6	access:public
+len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon3	access:public
+len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon4	access:public
+len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon5	access:public
+len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon6	access:public
+len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon7	access:public
+len	dobotDriver.hpp	/^    unsigned char len;$/;"	m	struct:__anon8	access:public
+main	runDobot.cpp	/^int main(int argc, char * argv[])$/;"	f	signature:(int argc, char * argv[])
+main	state_publisher.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	teleop_dobotpose_keyboard.cpp	/^int main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+mode	dobotDriver.hpp	/^    unsigned char mode;$/;"	m	struct:__anon3	access:public
+mode	dobotDriver.hpp	/^    unsigned int mode;$/;"	m	struct:__anon1	access:public
+openPort	dobotDriver.cpp	/^void DobotDriver::openPort() {$/;"	f	class:DobotDriver	signature:()
+openPort	dobotDriver.hpp	/^    void openPort();$/;"	p	class:DobotDriver	access:private	signature:()
+printGetCurrentPoseCmd	dobotDriver.cpp	/^void DobotDriver::printGetCurrentPoseCmd(CmdGetCurrentPose_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdGetCurrentPose_t cmd)
+printGetCurrentPoseCmd	dobotDriver.hpp	/^    void printGetCurrentPoseCmd(CmdGetCurrentPose_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdGetCurrentPose_t cmd)
+printGetCurrentPoseRetCmd	dobotDriver.cpp	/^void DobotDriver::printGetCurrentPoseRetCmd(CmdGetCurrentPoseRet_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdGetCurrentPoseRet_t cmd)
+printGetCurrentPoseRetCmd	dobotDriver.hpp	/^    void printGetCurrentPoseRetCmd(CmdGetCurrentPoseRet_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdGetCurrentPoseRet_t cmd)
+printPointsetCmd	dobotDriver.cpp	/^void DobotDriver::printPointsetCmd(CmdPointSet_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdPointSet_t cmd)
+printPointsetCmd	dobotDriver.hpp	/^    void printPointsetCmd(CmdPointSet_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdPointSet_t cmd)
+printPointsetRetCmd	dobotDriver.cpp	/^void DobotDriver::printPointsetRetCmd(CmdPointSetRet_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdPointSetRet_t cmd)
+printPointsetRetCmd	dobotDriver.hpp	/^    void printPointsetRetCmd(CmdPointSetRet_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdPointSetRet_t cmd)
+printSetHomeCmd	dobotDriver.cpp	/^void DobotDriver::printSetHomeCmd(CmdSetHome_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdSetHome_t cmd)
+printSetHomeCmd	dobotDriver.hpp	/^    void printSetHomeCmd(CmdSetHome_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdSetHome_t cmd)
+queuedCmdIndex	dobotDriver.hpp	/^    unsigned char queuedCmdIndex[8];$/;"	m	struct:__anon4	access:public
+queuedCmdIndex	dobotDriver.hpp	/^    unsigned char queuedCmdIndex[8];$/;"	m	struct:__anon8	access:public
+r	dobotDriver.hpp	/^    float r;$/;"	m	struct:__anon1	access:public
+r	dobotDriver.hpp	/^    float r;$/;"	m	struct:__anon2	access:public
+r	dobotDriver.hpp	/^    unsigned char r[4];$/;"	m	struct:__anon3	access:public
+r	dobotDriver.hpp	/^    unsigned char r[4];$/;"	m	struct:__anon6	access:public
+reserved	dobotDriver.hpp	/^    unsigned char reserved;$/;"	m	struct:__anon7	access:public
+rosGoBootHome	dobotDriver.cpp	/^void DobotDriver::rosGoBootHome() {$/;"	f	class:DobotDriver	signature:()
+rosGoBootHome	dobotDriver.hpp	/^    void rosGoBootHome();$/;"	p	class:DobotDriver	access:public	signature:()
+rosPublishPose	dobotDriver.cpp	/^void DobotDriver::rosPublishPose() {$/;"	f	class:DobotDriver	signature:()
+rosPublishPose	dobotDriver.hpp	/^    void rosPublishPose();$/;"	p	class:DobotDriver	access:public	signature:()
+rosSet2Zero	dobotDriver.cpp	/^int DobotDriver::rosSet2Zero() {$/;"	f	class:DobotDriver	signature:()
+rosSet2Zero	dobotDriver.hpp	/^    int rosSet2Zero();$/;"	p	class:DobotDriver	access:public	signature:()
+rosSetPoseCB	dobotDriver.cpp	/^void DobotDriver::rosSetPoseCB(const dobot::DobotPoseMsg receivePose) {$/;"	f	class:DobotDriver	signature:(const dobot::DobotPoseMsg receivePose)
+rosSetPoseCB	dobotDriver.hpp	/^    void rosSetPoseCB(const dobot::DobotPoseMsg receivePose);$/;"	p	class:DobotDriver	access:public	signature:(const dobot::DobotPoseMsg receivePose)
+rosSetPoseCB	runDobot.cpp	/^void rosSetPoseCB(const dobot::DobotPoseMsg receivePose);$/;"	p	file:	signature:(const dobot::DobotPoseMsg receivePose)
+runPointset	dobotDriver.cpp	/^int DobotDriver::runPointset(Pose_t pose) {$/;"	f	class:DobotDriver	signature:(Pose_t pose)
+runPointset	dobotDriver.hpp	/^    int runPointset(Pose_t pose);$/;"	p	class:DobotDriver	access:private	signature:(Pose_t pose)
+sendGetCurrentPoseCmd	dobotDriver.cpp	/^void DobotDriver::sendGetCurrentPoseCmd(CmdGetCurrentPose_t cmd, FullPose_t &retPose) {$/;"	f	class:DobotDriver	signature:(CmdGetCurrentPose_t cmd, FullPose_t &retPose)
+sendGetCurrentPoseCmd	dobotDriver.hpp	/^    void sendGetCurrentPoseCmd(CmdGetCurrentPose_t cmd, FullPose_t &retPose);$/;"	p	class:DobotDriver	access:private	signature:(CmdGetCurrentPose_t cmd, FullPose_t &retPose)
+sendPointsetCmd	dobotDriver.cpp	/^void DobotDriver::sendPointsetCmd(CmdPointSet_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdPointSet_t cmd)
+sendPointsetCmd	dobotDriver.hpp	/^    void sendPointsetCmd(CmdPointSet_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdPointSet_t cmd)
+sendSetHomeCmd	dobotDriver.cpp	/^void DobotDriver::sendSetHomeCmd(CmdSetHome_t cmd) {$/;"	f	class:DobotDriver	signature:(CmdSetHome_t cmd)
+sendSetHomeCmd	dobotDriver.hpp	/^    void sendSetHomeCmd(CmdSetHome_t cmd);$/;"	p	class:DobotDriver	access:private	signature:(CmdSetHome_t cmd)
+setInit	dobotDriver.cpp	/^int DobotDriver::setInit(ros::NodeHandle node) {$/;"	f	class:DobotDriver	signature:(ros::NodeHandle node)
+setInit	dobotDriver.hpp	/^    int setInit(ros::NodeHandle node);$/;"	p	class:DobotDriver	access:private	signature:(ros::NodeHandle node)
+setPoseSub	dobotDriver.hpp	/^    ros::Subscriber setPoseSub;$/;"	m	class:DobotDriver	access:private
+setUartOpt	dobotDriver.cpp	/^void DobotDriver::setUartOpt(const int nSpeed, const int nBits, const char nEvent, const int nStop) {$/;"	f	class:DobotDriver	signature:(const int nSpeed, const int nBits, const char nEvent, const int nStop)
+setUartOpt	dobotDriver.hpp	/^    void setUartOpt(const int nSpeed, const int nBits, const char nEvent, const int nStop);$/;"	p	class:DobotDriver	access:private	signature:(const int nSpeed, const int nBits, const char nEvent, const int nStop)
+uartBaud	dobotDriver.hpp	/^    const unsigned int uartBaud;$/;"	m	class:DobotDriver	access:private
+uartFd	dobotDriver.hpp	/^    int uartFd;$/;"	m	class:DobotDriver	access:private
+uartInit	dobotDriver.cpp	/^int DobotDriver::uartInit() {$/;"	f	class:DobotDriver	signature:()
+uartInit	dobotDriver.hpp	/^    int uartInit();$/;"	p	class:DobotDriver	access:private	signature:()
+uartPort	dobotDriver.hpp	/^    const char *uartPort;$/;"	m	class:DobotDriver	access:private
+updateCurrentPose	dobotDriver.cpp	/^void DobotDriver::updateCurrentPose(Pose_t pose) {$/;"	f	class:DobotDriver	signature:(Pose_t pose)
+updateCurrentPose	dobotDriver.hpp	/^    void updateCurrentPose(Pose_t pose);$/;"	p	class:DobotDriver	access:private	signature:(Pose_t pose)
+updateZero	dobotDriver.cpp	/^int DobotDriver::updateZero() {$/;"	f	class:DobotDriver	signature:()
+updateZero	dobotDriver.hpp	/^    int updateZero();$/;"	p	class:DobotDriver	access:private	signature:()
+x	dobotDriver.hpp	/^    float x;$/;"	m	struct:__anon1	access:public
+x	dobotDriver.hpp	/^    float x;$/;"	m	struct:__anon2	access:public
+x	dobotDriver.hpp	/^    unsigned char x[4];$/;"	m	struct:__anon3	access:public
+x	dobotDriver.hpp	/^    unsigned char x[4];$/;"	m	struct:__anon6	access:public
+y	dobotDriver.hpp	/^    float y;$/;"	m	struct:__anon1	access:public
+y	dobotDriver.hpp	/^    float y;$/;"	m	struct:__anon2	access:public
+y	dobotDriver.hpp	/^    unsigned char y[4];$/;"	m	struct:__anon3	access:public
+y	dobotDriver.hpp	/^    unsigned char y[4];$/;"	m	struct:__anon6	access:public
+z	dobotDriver.hpp	/^    float z;$/;"	m	struct:__anon1	access:public
+z	dobotDriver.hpp	/^    float z;$/;"	m	struct:__anon2	access:public
+z	dobotDriver.hpp	/^    unsigned char z[4];$/;"	m	struct:__anon3	access:public
+z	dobotDriver.hpp	/^    unsigned char z[4];$/;"	m	struct:__anon6	access:public
+zeroR	dobotDriver.cpp	/^float DobotDriver::zeroR = 0;$/;"	m	class:DobotDriver	file:
+zeroR	dobotDriver.hpp	/^    static float zeroR;$/;"	m	class:DobotDriver	access:private
+zeroX	dobotDriver.cpp	/^float DobotDriver::zeroX = 200.0;$/;"	m	class:DobotDriver	file:
+zeroX	dobotDriver.hpp	/^    static float zeroX;$/;"	m	class:DobotDriver	access:private
+zeroY	dobotDriver.cpp	/^float DobotDriver::zeroY = 0.0;$/;"	m	class:DobotDriver	file:
+zeroY	dobotDriver.hpp	/^    static float zeroY;$/;"	m	class:DobotDriver	access:private
+zeroZ	dobotDriver.cpp	/^float DobotDriver::zeroZ = -35;$/;"	m	class:DobotDriver	file:
+zeroZ	dobotDriver.hpp	/^    static float zeroZ;$/;"	m	class:DobotDriver	access:private

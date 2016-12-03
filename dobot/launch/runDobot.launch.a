@@ -1,0 +1,5 @@
+<launch>
+    <node name="runDobot" pkg="dobot" type="runDobot" output="screen">
+        <rosparam file="$(find dobot)/params/zero.yaml" command="load" />
+    </node>
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+    <param name="robot_description" command="cat $(find dobot)/urdf/dobot.urdf" />
+    <node name="state_publisher" pkg="dobot" type="state_publisher" />
+</launch>
