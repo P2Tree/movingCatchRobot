@@ -1,2 +1,4 @@
 #ignore these files
 rbx1/*
+usb_cam/*
+uvc_cam/*
