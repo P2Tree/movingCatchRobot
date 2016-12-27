@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot name="sensor_rplidar" xmlns:xacro="http://ros.org/wiki/xacro">
+	
+    <macro name="rplidar" params="color parent">
+  	<joint name="laser_joint" type="fixed">
+		<origin xyz="0 0 0.040" rpy="0 0 0" />
+		<parent link="${parent}" />
+		<child link="laser" />
+        <!-- this is not laser_frame, I don't know how to set -->
+	</joint>
+
+	<link name="laser">
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+                <cylinder length="0.03" radius="0.035" />
+			</geometry>
+            <material name="${color}">
+				<color rgba="0 0 .8 1"/>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+			<geometry>
+                <cylinder length="0.03" radius="0.035" />
+			</geometry>
+	  	</collision>
+	      	<inertial>
+			<mass value="0.564" />
+			<origin xyz="0 0 0" />
+			<inertia ixx="0.003881243" ixy="0.0" ixz="0.0"
+			         iyy="0.000498940" iyz="0.0"
+			         izz="0.003879257" />
+	      	</inertial>
+	</link>
+    </macro>
+</robot>

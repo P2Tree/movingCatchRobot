@@ -102,7 +102,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES dashgo_nav
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+ # CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -128,15 +128,15 @@ include_directories(
 # add_dependencies(dashgo_nav ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(dashgo_nav_node src/dashgo_nav_node.cpp)
+# add_executable(rplidarNode node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(dashgo_nav_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(rplidarNode ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(dashgo_nav_node
-#   ${catkin_LIBRARIES}
+# target_link_libraries(rplidarNode
+  # ${catkin_LIBRARIES}
 # )
 
 #############

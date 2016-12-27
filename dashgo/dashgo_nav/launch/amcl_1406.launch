@@ -7,7 +7,7 @@
       <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>  
       <param name="serial_baudrate"     type="int"    value="115200"/>
       <param name="frame_id"            type="string" value="laser_frame"/>
-      <param name="inverted"            type="bool"   value="false"/>
+      <param name="inverted"            type="bool"   value="true"/>
       <param name="angle_compensate"    type="bool"   value="true"/>
   </node>
   <include file="$(find dashgo_description)/launch/dashgo_description.launch"/>
@@ -16,7 +16,7 @@
     args="0.0 0.0 0.0 0.0 3.1415926 0.0 /base_link /laser_frame 40" />
 
   <!-- Map server -->
-  <arg name="map_file" default="$(find dashgo_nav)/maps/amcl_test.yaml"/>
+  <arg name="map_file" default="$(find dashgo_nav)/maps/1406_4.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
       <arg name="initial_pose_x" default="0.0"/> <!-- Use 17.0 for willow's map in simulation -->

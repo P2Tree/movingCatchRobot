@@ -13,6 +13,8 @@
     	<param name="rate" value="20.0"/>
     </node>
 
+    <!--
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dashgo_description)/urdf.rviz"/>
+    -->
 
 </launch>

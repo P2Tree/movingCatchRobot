@@ -61,14 +61,14 @@ void publish_scan(ros::Publisher *pub,
     scan_msg.header.frame_id = frame_id;
     scan_count++;
 
-    // bool reversed = (angle_max > angle_min);
-    // if ( reversed ) {
-      // scan_msg.angle_min =  M_PI - angle_max;
-      // scan_msg.angle_max =  M_PI - angle_min;
-    // } else {
-      // scan_msg.angle_min =  M_PI - angle_min;
-      // scan_msg.angle_max =  M_PI - angle_max;
-    // }
+    bool reversed = (angle_max > angle_min);
+    if ( reversed ) {
+      scan_msg.angle_min =  M_PI - angle_max;
+      scan_msg.angle_max =  M_PI - angle_min;
+    } else {
+      scan_msg.angle_min =  M_PI - angle_min;
+      scan_msg.angle_max =  M_PI - angle_max;
+    }
     scan_msg.angle_min = angle_min;
     scan_msg.angle_max = angle_max;
 
@@ -192,6 +192,8 @@ int main(int argc, char * argv[]) {
     bool inverted = false;
     bool angle_compensate = true;
 
+    int beam_filter_radius = 800;   // radius of car is 20cm
+
     ros::NodeHandle nh;
     ros::Publisher scan_pub = nh.advertise<sensor_msgs::LaserScan>("scan", 1000);
     ros::NodeHandle nh_private("~");
@@ -267,6 +269,9 @@ int main(int argc, char * argv[]) {
                     int i = 0, j = 0;
                     for( ; i < count; i++ ) {
                         if (nodes[i].distance_q2 != 0) {
+                            if (nodes[i].distance_q2 < beam_filter_radius) {
+                                nodes[i].distance_q2 = 0;
+                            }
                             float angle = (float)((nodes[i].angle_q6_checkbit >> RPLIDAR_RESP_MEASUREMENT_ANGLE_SHIFT)/64.0f);
                             int angle_value = (int)(angle * angle_compensate_multiple);
                             if ((angle_value - angle_compensate_offset) < 0) angle_compensate_offset = angle_value;

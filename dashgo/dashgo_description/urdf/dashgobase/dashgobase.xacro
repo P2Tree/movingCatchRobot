@@ -26,9 +26,11 @@
    <xacro:include filename="$(find dashgo_description)/urdf/dashgobase/base.urdf.xacro" />
    <xacro:include filename="$(find dashgo_description)/urdf/dashgobase/torso.urdf.xacro" />
    <xacro:include filename="$(find dobot)/urdf/dobot.urdf.xacro" />
+   <xacro:include filename="$(find dashgo_description)/urdf/dashgobase/rplidar.urdf.xacro" />
    
    <!-- Add the base and wheels -->
    <base name="base" color="Black"/>
+
    
    <!-- Attach the torso -->
    <torso name="torso1" parent="base" color="Grey">
@@ -85,7 +87,7 @@
    </joint>
 
   <joint name="laser_plane_joint" type="fixed">
-      <origin xyz="0.00 0.00 0.14" rpy="0 0 0" />
+      <origin xyz="0.00 0.00 0.155" rpy="0 0 0" />
       <parent link="base_link" />
       <child link="laser_plane_frame" />
   </joint>
@@ -94,7 +96,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <box size="0.1 0.07 0.07" />
+        <box size="0.1 0.07 0.05" />
       </geometry>
       <material name="Green" />
     </visual>
@@ -107,8 +109,25 @@
     </inertial>
   </link>
 
-  <!-- <joint name="laser_joint" /> -->
-  <!-- <link name="laser_frame" /> -->
+   <!-- Add the laser -->
+   <rplidar color="Blue" parent="laser_plane_frame" />
+
+  <!-- <joint name="laser_joint" type="continuous"> -->
+    <!-- <origin xyz="0 0 0.04" rpy="0 0 0" /> -->
+    <!-- <parent link="laser_plane_frame" /> -->
+    <!-- <child link="laser_frame" /> -->
+    <!-- <axis xyz="0 0 1" /> -->
+  <!-- </joint> -->
+<!--  -->
+  <!-- <link name="laser_frame" > -->
+    <!-- <visual> -->
+      <!-- <origin xyz="0 0 0" rpy="0 0 0" /> -->
+      <!-- <geometry> -->
+          <!-- <cylinder length="0.03" radius="0.035" /> -->
+      <!-- </geometry> -->
+      <!-- <material name="Black" /> -->
+    <!-- </visual> -->
+  <!-- </link> -->
 
   <link name="front_flag">
       <visual>
